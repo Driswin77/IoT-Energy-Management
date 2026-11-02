@@ -1,56 +1,41 @@
-# Welcome to your Expo app 👋
+# ⚡ Explainable AI-Enabled IoT Personalized Recommendation System for Residential Energy Management
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+## 📖 Overview
+This project presents an intelligent, context-aware residential energy management system. It bridges the gap between passive smart meter data and actionable consumer behavior by integrating low-cost IoT hardware, cloud computing, Machine Learning (GRU), and Explainable AI (XAI). 
 
-## Get started
+The system provides personalized appliance scheduling recommendations based on Indian Time-of-Day (ToD) tariffs while ensuring user comfort is never compromised.
 
-1. Install dependencies
+## 🚀 Key Features
+*   **Real-Time Monitoring:** Tracks live power consumption (Voltage, Current, Watts) and room occupancy.
+*   **AI Forecasting:** Uses a Gated Recurrent Unit (GRU) model to predict short-term energy demand.
+*   **Explainable AI (XAI):** Integrates SHAP and LIME to provide human-readable "Why?" explanations for every recommendation.
+*   **Context-Aware:** Uses PIR sensors to ensure recommendations (like turning off the AC) are only made when a room is empty.
+*   **Anomaly Detection:** Monitors appliance power signatures to detect faults and alert the user.
+*   **Mobile Dashboard:** A React Native app for real-time visualization and remote relay control.
 
-   ```bash
-   npm install
-   ```
+## 🛠️ Technology Stack
+**Hardware:**
+*   ESP32-S3 (N16R8)
+*   PZEM-004T Energy Sensor (100A)
+*   HC-SR501 PIR Sensor
+*   5V Relay Module
 
-2. Start the app
+**Software & Cloud:**
+*   **Frontend:** React Native (Expo)
+*   **Backend/AI:** Python (TensorFlow/Keras, Scikit-learn, SHAP, LIME)
+*   **Database:** Firebase Realtime Database
+*   **Firmware:** C++ (Arduino IDE)
 
-   ```bash
-   npx expo start
-   ```
+## 📂 Repository Structure
+*   `/EnergyDashboard` - The React Native mobile application code.
+*   `/Arduino` - (Coming Soon) The C++ firmware for the ESP32 edge node.
+*   `/Backend` - (Coming Soon) The Python AI pipeline for GRU forecasting and XAI.
 
-In the output, you'll find options to open the app in a
+## 👥 Team Members
+*   Driswin Kumar K (MES23CS033)
+*   Rishikesh S (MES23CS142)
+*   Fathima Nasmi (MES23CS039)
+*   Baasil Muhammad B (MES23CS030)
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
-```
-
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-### Other setup steps
-
-- To set up ESLint for linting, run `npx expo lint`, or follow our guide on ["Using ESLint and Prettier"](https://docs.expo.dev/guides/using-eslint/)
-- If you'd like to set up unit testing, follow our guide on ["Unit Testing with Jest"](https://docs.expo.dev/develop/unit-testing/)
-- Learn more about the TypeScript setup in this template in our guide on ["Using TypeScript"](https://docs.expo.dev/guides/typescript/)
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+**Guide:** Dr. Harikrishnan G R (Associate Professor, Dept. of CSE)
+**Institution:** MES College of Engineering, Kuttippuram
